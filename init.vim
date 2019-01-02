@@ -2,14 +2,15 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
-Plug 'w0rp/ale'
+Plug 'digitaltoad/vim-pug'
+" Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier'
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
 " Deoplete settings
-let g:deoplete#enable_at_startup = 1
+" let g:deoplete#enable_at_startup = 1
 
 
 " Start autocompletion after 4 chars
@@ -32,8 +33,8 @@ set pumheight=5
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " Deoplete remap selectors to tab and shift-tab
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Colorscheme thing
 colorscheme one
@@ -45,3 +46,6 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 " Airline theme
 let g:airline_theme='deus'
 
+" ale settings
+let b:ale_fixers = ['prettier']
+let g:ale_fix_on_save = 1
