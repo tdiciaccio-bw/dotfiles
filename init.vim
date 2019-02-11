@@ -3,7 +3,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rakr/vim-one'
 Plug 'digitaltoad/vim-pug'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
@@ -28,6 +28,8 @@ set pumheight=5
 
 :let mapleader="\<Space>"
 
+" ALEFix mapped to space+d
+nmap <leader>d <Plug>(ale_fix)
 
 " enhance YCM JS completion with tern's smarts
 autocmd FileType javascript setlocal omnifunc=tern#Complete
@@ -47,5 +49,13 @@ highlight Pmenu ctermfg=15 ctermbg=0 guifg=#ffffff guibg=#000000
 let g:airline_theme='deus'
 
 " ale settings
-let b:ale_fixers = ['prettier']
+let g:ale_linters = {'javascript': ['eslint'],}
+let g:ale_fixers = {'javascript': ['eslint'],}
 let g:ale_fix_on_save = 1
+
+" Set tab width to two spaces
+filetype plugin indent on
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
