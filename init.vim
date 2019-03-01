@@ -7,7 +7,8 @@ Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'mxw/vim-jsx'
 call plug#end()
 " Deoplete settings
 " let g:deoplete#enable_at_startup = 1
@@ -59,3 +60,10 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+" Highlight characters over the 100 character line limit
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%101v.\+/
+
+" JSX context highlighting
+
