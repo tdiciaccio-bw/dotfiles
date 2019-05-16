@@ -6,9 +6,12 @@ set -q XDG_DATA_HOME
 # Load Oh My Fish configuration.
 source $OMF_PATH/init.fish
 
-thefuck --alias | source
-
 alias vim nvim
 alias ls 'ls -latrh'
+alias ops 'cd ~/redcross/ZapierReplace'
+alias rose 'cd ~/redcross/Rosetta'
+alias mouse 'blueutil -p 1'
+alias octave '/usr/local/octave/3.8.0/bin/octave-3.8.0'
 
 set -U fish_greeting "Oh hey.  Didn't see you there.  So you come here often?"
+

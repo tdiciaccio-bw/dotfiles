@@ -7,7 +7,7 @@ Plug 'w0rp/ale'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe'
 Plug 'mxw/vim-jsx'
 call plug#end()
 " Deoplete settings
