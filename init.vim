@@ -68,3 +68,4 @@ match OverLength /\%101v.\+/
 
 " Clear search highlighting with Space + c
 nnoremap <silent> <leader>c :nohl<CR><C-l>
+" JSX context highlighting
