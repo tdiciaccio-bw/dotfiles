@@ -10,5 +10,7 @@ thefuck --alias | source
 
 alias vim nvim
 alias ls 'ls -latrh'
+alias snow 'cd ~/ServiceNow-Scripts'
+alias dev 'cd ~/projects/java'
 
 set -U fish_greeting "Oh hey.  Didn't see you there.  So you come here often?"
